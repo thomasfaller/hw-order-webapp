@@ -12,6 +12,8 @@ import Head from "next/head";
 import React from "react";
 import { theme } from "../theme";
 
+const appTitle = "Healthwave Order App";
+
 const OrderApp = ({ Component, pageProps }: AppProps) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -24,16 +26,16 @@ const OrderApp = ({ Component, pageProps }: AppProps) => {
   return (
     <React.Fragment>
       <Head>
-        <title>Multi-Step Form</title>
+        <title>{appTitle}</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <AppBar position="fixed">
+        <AppBar position="sticky">
           <Toolbar variant="dense">
-            <Typography variant="h6">Multi-Step Form</Typography>
+            <Typography variant="h6">{appTitle}</Typography>
           </Toolbar>
         </AppBar>
 
